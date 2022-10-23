@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      .LGLeeN-keyboard-shortcuts-view {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .LGLeeN-keyboard-shortcuts-view table,
+      .LGLeeN-keyboard-shortcuts-view tbody,
+      .LGLeeN-keyboard-shortcuts-view td,
+      .LGLeeN-keyboard-shortcuts-view tr {
+        background: inherit;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+      .LGLeeN-keyboard-shortcuts-view table {
+        display: table;
+      }
+      .LGLeeN-keyboard-shortcuts-view tr {
+        display: table-row;
+      }
+      .LGLeeN-keyboard-shortcuts-view td {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: table-cell;
+        color: #000;
+        padding: 6px;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+      .LGLeeN-keyboard-shortcuts-view
+        td
+        .VdnQmO-keyboard-shortcuts-view--shortcut-key {
+        background-color: #e8eaed;
+        border-radius: 2px;
+        border: none;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color: inherit;
+        display: inline-block;
+        font-family: Google Sans Text, Roboto, Arial, sans-serif;
+        line-height: 16px;
+        margin: 0 2px;
+        min-height: 20px;
+        min-width: 20px;
+        padding: 2px 4px;
+        position: relative;
+        text-align: center;
+      }
+    </style>
+    <style>
+      .gm-control-active > img {
+        box-sizing: content-box;
+        display: none;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .gm-control-active > img:nth-child(1) {
+        display: block;
+      }
+      .gm-control-active:focus > img:nth-child(1),
+      .gm-control-active:hover > img:nth-child(1),
+      .gm-control-active:active > img:nth-child(1),
+      .gm-control-active:disabled > img:nth-child(1) {
+        display: none;
+      }
+      .gm-control-active:focus > img:nth-child(2),
+      .gm-control-active:hover > img:nth-child(2) {
+        display: block;
+      }
+      .gm-control-active:active > img:nth-child(3) {
+        display: block;
+      }
+      .gm-control-active:disabled > img:nth-child(4) {
+        display: block;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="./index_files/css" />
+    <link type="text/css" rel="stylesheet" href="./index_files/css(1)" />
+    <style>
+      .gm-ui-hover-effect {
+        opacity: 0.6;
+      }
+      .gm-ui-hover-effect:hover {
+        opacity: 1;
+      }
+      .gm-ui-hover-effect > span {
+        background-color: #000;
+      }
+      @media (forced-colors: active), (prefers-contrast: more) {
+        .gm-ui-hover-effect > span {
+          background-color: ButtonText;
+        }
+      }
+    </style>
+    <style>
+      .gm-style .gm-style-cc a,
+      .gm-style .gm-style-cc button,
+      .gm-style .gm-style-cc span,
+      .gm-style .gm-style-mtc div {
+        font-size: 10px;
+        box-sizing: border-box;
+      }
+      .gm-style .gm-style-cc a,
+      .gm-style .gm-style-cc button,
+      .gm-style .gm-style-cc span {
+        outline-offset: 3px;
+      }
+    </style>
+    <style>
+      @media print {
+        .gm-style .gmnoprint,
+        .gmnoprint {
+          display: none;
+        }
+      }
+      @media screen {
+        .gm-style .gmnoscreen,
+        .gmnoscreen {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      .dismissButton {
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        color: #F49E3B;
+        border-radius: 4px;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        height: 36px;
+        cursor: pointer;
+        padding: 0 24px;
+      }
+      .dismissButton:hover {
+        background-color: rgba(66, 133, 244, 0.04);
+        border: 1px solid #d2e3fc;
+      }
+      .dismissButton:focus {
+        background-color: rgba(66, 133, 244, 0.12);
+        border: 1px solid #d2e3fc;
+        outline: 0;
+      }
+      .dismissButton:focus:not(:focus-visible) {
+        background-color: #fff;
+        border: 1px solid #dadce0;
+        outline: none;
+      }
+      .dismissButton:focus-visible {
+        background-color: rgba(66, 133, 244, 0.12);
+        border: 1px solid #d2e3fc;
+        outline: 0;
+      }
+      .dismissButton:hover:focus {
+        background-color: rgba(66, 133, 244, 0.16);
+        border: 1px solid #d2e2fd;
+      }
+      .dismissButton:hover:focus:not(:focus-visible) {
+        background-color: rgba(66, 133, 244, 0.04);
+        border: 1px solid #d2e3fc;
+      }
+      .dismissButton:hover:focus-visible {
+        background-color: rgba(66, 133, 244, 0.16);
+        border: 1px solid #d2e2fd;
+      }
+      .dismissButton:active {
+        background-color: rgba(66, 133, 244, 0.16);
+        border: 1px solid #d2e2fd;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+          0 1px 3px 1px rgba(60, 64, 67, 0.15);
+      }
+      .dismissButton:disabled {
+        background-color: #fff;
+        border: 1px solid #f1f3f4;
+        color: #3c4043;
+      }
+    </style>
+    <style>
+      .gm-style-moc {
+        background-color: rgba(0, 0, 0, 0.45);
+        pointer-events: none;
+        text-align: center;
+        transition: opacity ease-in-out;
+      }
+      .gm-style-mot {
+        color: white;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 22px;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+      }
+    </style>
+    <style>
+      .gm-style img {
+        max-width: none;
+      }
+      .gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+    </style>
+    <!-- Meta Tags -->
+
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!-- Author -->
+    <meta name="author" content="Shaibu ZAchariyya" />
+    <!-- description -->
+    <meta
+      name="description"
+      content="We are working with tech startups in Ghana to provide seed funding and support systems to scale up projects and grow their companies to become the next ‘unicorns’ coming out of Africa."
+    />
+    <!-- keywords -->
+    <meta name="keywords" content="startups,technologies,IT,Incubators" />
+    <!-- Page Title -->
+    <title>Guzuli Tech | Home</title>
+
+    <!-- Favicon -->
+    <link href="./index_files/innovative1/img/favicon.ico" rel="icon" />
+    <!-- Bundle -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./index_files/bundle.min.css" rel="stylesheet" />
+    <link href="./index_files/revolution-settings.min.css" rel="stylesheet" />
+    <link href="./index_files/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Plugin Css -->
+    <link href="./index_files/jquery.fancybox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./index_files/line-awesome.min.css" />
+    <link rel="stylesheet" href="./index_files/slick-theme.css" />
+    <link rel="stylesheet" href="./index_files/slick.css" />
+    <!-- Style Sheet -->
+    <link href="./index_files/style.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./index_files/common.js.download"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./index_files/util.js.download"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./index_files/map.js.download"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./index_files/marker.js.download"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./index_files/onion.js.download"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./index_files/controls.js.download"
+    ></script>
+
+    <style>
+
+.navbar-simple .navbar-nav .nav-link{
+            color: #754500;
+            font-weight: bolder;
+        }
+
+        .btn.btn-transparent-white {
+    background: transparent;
+    border-color: #754500;
+    color: #754500 !important;
+}
+
+.header-appear .navbar-simple .navbar-nav .nav-link {
+    color: #754500;
+    font-weight: bolder;
+}
+
+.header-appear .sidemenu_btn span {
+    background-color: #754500;
+}
+
+
+
+    </style>
+  </head>
+
+  <body
+    data-offset="90"
+    data-spy="scroll"
+    data-target=".navbar"
+    cz-shortcut-listen="true"
+  >
+    <!--start loader-->
+    <div class="loader center-block" style="display: none;">
+      <div class="spinner">
+        <div class="spinner-container container1">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+        </div>
+      </div>
+    </div>
+    <!--loader end-->
+
+    <!--Header Start-->
+    <header class="">
+      <!--Navigation-->
+      <nav
+        class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-box-round"
+      >
+        <div class="container">
+          <a href="#home" title="Logo" class="logo scroll">
+            <h3 style="color: #754500;"><strong>Guzuli Tech</strong></h3>
+          </a>
+
+          <!--Nav Links-->
+          <div class="collapse navbar-collapse" id="megaone">
+            <div  class="navbar-nav ml-auto">
+              <a
+                class="nav-link scroll"
+                href="./index_files/index-innovative1.html#home"
+              >
+                Home
+                <span></span>
+              </a>
+              <a
+                class="nav-link scroll"
+                href="./index_files/index-innovative1.html#services"
+              >
+                What we do
+                <span></span>
+              </a>
+              <a
+                class="nav-link scroll"
+                href="./index_files/index-innovative1.html#portfolio-area"
+              >
+                Join us Today
+                <span></span>
+              </a>
+              <a
+                class="nav-link scroll"
+                href="./index_files/index-innovative1.html#reviews"
+              >
+                Become Investor
+                <span></span>
+              </a>
+              <a
+                class="nav-link scroll"
+                href="./index_files/index-innovative1.html#contact"
+              >
+                Contact Us
+                <span></span>
+              </a>
+            </div>
+          </div>
+
+          <!--Side Menu Button-->
+          <a
+            href="javascript:void(0)"
+            class="d-inline-block sidemenu_btn"
+            id="sidemenu_toggle"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </nav>
+      <!--Side Nav-->
+      <div class="side-menu">
+        <div class="inner-wrapper">
+          <span class="btn-close" id="btn_sideNavClose">
+            <i></i>
+            <i></i>
+          </span>
+          <nav class="side-nav w-100">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link scroll"
+                  href="./index_files/index-innovative1.html#home"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link scroll"
+                  href="./index_files/index-innovative1.html#services"
+                >
+                  What we do
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link scroll"
+                  href="./index_files/index-innovative1.html#portfolio-area"
+                >
+                  Join us Today
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link scroll"
+                  href="./index_files/index-innovative1.html#reviews"
+                >
+                  Become Investor
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link scroll"
+                  href="./index_files/index-innovative1.html#contact"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="side-footer text-white w-100">
+            <ul class="social-icons-simple">
+              <li>
+                <a class="facebook-text-hvr" href="https://www.facebook.com/GuzuliTechHub">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <!-- <li>
+                <a class="instagram-text-hvr" href="javascript:void(0)">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter-text-hvr" href="javascript:void(0)">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li> -->
+            </ul>
+            <p class="text-white">© 2020 GUzuli Tech</p>
+          </div>
+        </div>
+      </div>
+      <a
+        id="close_side_menu"
+        href="javascript:void(0);"
+        style="display: none;"
+      ></a>
+      <!-- End side menu -->
+    </header>
+    <!--Header end-->
+
+    <!--Single portfolio item one-->
+    <section class="single-items slider-items p-0" id="home">
+      <div
+        class="item slider-inner center-block parallax m-0"
+        style="
+          background: url('./home_slide.png')
+            center 0px / cover no-repeat fixed;
+          height: 100vh;
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 center-col">
+              <div class="area-heading text-center text-lg-left wow fadeInUp">
+                <h3 style="color: #754500;"
+                  class="area-title text-capitalize alt-font mb-2 font-weight-100"
+                >
+                  <strong>Guzuli</strong>
+                  Tech
+                </h3>
+                <p style="color: #754500;font-weight: bolder;">
+                  We are working with tech startups in Ghana to provide seed
+                  funding and support systems to scale up projects and grow
+                  their companies to become the next ‘unicorns’ coming out of
+                  Africa.
+                </p>
+                <a
+                  class="btn btn-transparent-white btn-rounded btn-rounded btn-large mt-3"
+                  href="#services"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Single portfolio item two-->
+    <section
+      class="single-items center-block parallax services-area"
+      id="services"
+      style="
+        background: url('./what_we_do_slide.png')
+          center 291.6px / cover no-repeat fixed;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4"></div>
+          <div class="col-12 col-lg-8">
+            <div class="row no-gutters">
+              <div class="area-heading text-center text-lg-left wow fadeInUp">
+                <h3
+                  class="area-title text-capitalize alt-font text-white mb-2 font-weight-100"
+                >
+                  <strong>What we do</strong>
+                </h3>
+                <ul class="text-white">
+                  <li>
+                    We are working with tech startups in Ghana to provide seed
+                    funding and support systems to scale up projects and grow
+                    their companies to become the next ‘unicorns’ coming out of
+                    Africa.
+                  </li>
+                  <li>
+                    We are providing a network of experienced tech entrepreneurs
+                    both from Africa, Europe and the USA to share and mentor
+                    startups incubated with us on how to run businesses and
+                    develop great products that customers will pay for.
+                  </li>
+                  <li>
+                    We are providing working space and a technical team to guide
+                    entrepreneurs to take products to market. The whole process
+                    of go-to-market shall be guided by an excellent team of
+                    experts from various key departments – Marketing, Sales and
+                    Distribution, Customer Management, Finance and Legal.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--portfolio without parallax-->
+    <section class="portfolio" id="portfolio-area"
+    >
+      <!--Projects content start-->
+      <div id="project-sec" class="project-sec">
+        <div
+          class="projects owl-carousel owl-theme no-gutters owl-loaded owl-drag"
+        >
+          <div class="item project-area"></div>
+        </div>
+        <div class="owl-item active">
+          <div class="item project-area">
+            <div class="project-img order-1">
+              <img width="100%" height="auto" src="./looking_for_slide.png" alt="images" />
+            </div>
+            <div class="container">
+              <div class="project-detail text-center text-lg-left order-2">
+                <div class="row no-gutters">
+                  <div
+                    class="col-10 offset-1 offset-lg-0 col-lg-8 animate-fade"
+                  >
+                    <h6 class="project-heading">Who are we looking for?</h6>
+                    <ul>
+                      <li>
+                        <strong>Partners</strong>
+                        - To work with us in both executive and non-executive
+                        roles to set up a fully functional business incubator.
+                      </li>
+                      <li>
+                        <strong>Investors</strong>
+                        - To back the incubator’s VC fund that will invest seed
+                        funds in the incubated portfolio companies to the tune
+                        of $25,000 per startup in convertible debt.
+                      </li>
+                      <li>
+                        <strong>Mentors</strong>
+                        – Seasoned tech entrepreneurs to provide direct advice
+                        and mentorship to the startup companies on how to
+                        develop great products.
+                      </li>
+                      <li>
+                        <strong>Experts</strong>
+                        – Experienced persons in Marketing, Sales and
+                        Distribution, Customer Management, Finance and Legal to
+                        work with the start-up companies on a daily basis to
+                        develop and take products to market.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Projects content end-->
+    </section>
+    <!--portfolio without parallax-->
+
+    <!--Single portfolio item two-->
+    <section
+      class="single-items center-block parallax services-area"
+      id="reviews"
+      style="
+        background: url('./promise_slide.png')
+          center 291.6px / cover no-repeat fixed;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4"></div>
+          <div class="col-12 col-lg-8">
+            <div class="row no-gutters">
+              <div class="area-heading text-center text-lg-left wow fadeInUp">
+                <h4
+                  class="area-title text-capitalize alt-font text-white mb-2 font-weight-100"
+                >
+                  <strong>What we promise our investors</strong>
+                </h4>
+                <ul class="text-white">
+                  <li>
+                    We are working with tech startups in Ghana to provide seed
+                    funding and support systems to scale up projects and grow
+                    their companies to become the next ‘unicorns’ coming out of
+                    Africa.
+                  </li>
+                  <li>
+                    We are providing a network of experienced tech entrepreneurs
+                    both from Africa, Europe and the USA to share and mentor
+                    startups incubated with us on how to run businesses and
+                    develop great products that customers will pay for.
+                  </li>
+                  <li>
+                    We are providing working space and a technical team to guide
+                    entrepreneurs to take products to market. The whole process
+                    of go-to-market shall be guided by an excellent team of
+                    experts from various key departments – Marketing, Sales and
+                    Distribution, Customer Management, Finance and Legal.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Single portfolio item eight-->
+    <section
+      class="single-items center-block parallax contact-us-sec"
+      id="contact"
+      style="
+        background: url('./contact_slide.png')
+          center 2332.8px / cover no-repeat fixed;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 contact-details text-center text-lg-left">
+            <div class="location-details">
+              <h4 class="contact-heading">
+                GUzuli
+                <strong>Tech</strong>
+              </h4>
+              <p class="contact-address">Accra, Ghana.</p>
+              <ul class="contact-list">
+                <li>
+                  <span>Office Telephone :</span>
+                  +233208108104
+                </li>
+                <li>
+                  <span>Email :</span>
+                  admin@guzulitech.com
+                </li>
+                <li>
+                  <span>Inquiries :</span>
+                  inquery@guzulitech.com
+                </li>
+                <li>
+                  <span>Mon-Fri:</span>
+                  9am to 6pm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer Start-->
+    <section class="bg-light text-center">
+      <h2 class="d-none">hidden</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-social">
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    class="wow fadeInUp"
+                    href="https://www.facebook.com/GuzuliTechHub"
+                  >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <!-- <li><a class="wow fadeInDown" href="javascript:void(0);"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInUp" href="javascript:void(0);"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInDown" href="javascript:void(0);"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInUp" href="javascript:void(0);"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInDown" href="javascript:void(0);"><i class="fab fa-youtube" aria-hidden="true"></i></a></li> -->
+              </ul>
+            </div>
+            <p class="company-about fadeIn">© 2022 Guzuli Tech</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer End-->
+
+    <!--Scroll Top-->
+    <a
+      class="scroll-top-arrow"
+      href="javascript:void(0);"
+      style="display: none;"
+    >
+      <i class="fas fa-angle-up"></i>
+    </a>
+    <!--Scroll Top End-->
+
+    <!-- JavaScript -->
+    <script src="./index_files/bundle.min.js.download"></script>
+    <!-- Plugin Js -->
+    <script src="./index_files/jquery.appear.js.download"></script>
+    <script src="./index_files/jquery.fancybox.min.js.download"></script>
+    <script src="./index_files/parallaxie.min.js.download"></script>
+    <script src="./index_files/wow.min.js.download"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="./index_files/owl.carousel.min.js.download"></script>
+    <script src="./index_files/slick.js.download"></script>
+    <script src="./index_files/slick.min.js.download"></script>
+    <script src="./index_files/js"></script>
+    <!-- custom script -->
+    <script src="./index_files/contact_us.js.download"></script>
+    <script src="./index_files/script.js.download"></script>
+
+    <div id="torrent-scanner-popup" style="display: none;"></div>
+  </body>
+</html>
